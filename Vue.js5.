@@ -1,0 +1,21 @@
+app.mount("#app")
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/5.0.5/vue.global.prod.js" integrity="sha512-7mjRUL9551cOFF57PSrURwSa9UsUmufUCU9icwUEoUrECcxpa20PakbPplb7b4ZGbCc0StIr9ytHoXH9+v6ygA==" crossorigin="anonymous"></script>
+<div id="app">
+  <div class="myTodos">
+    {{ filter }}
+    <ul id="todo-list">
+      <li v-for="(todo, index) in filteredTodos" :key="todo.id" class="todo-item ">
+        <input @click="toggleDone(todo)" class="js-tick" id="1610198328386" type="checkbox" :checked="todo.done">
+        <span :class="{ done: todo.done }">{{todo.task}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="controls">
+    <ul class="controls-list" data-lists>
+      <li id="All"><a @click="filter = 'all'" href="#">All<a/></li>
+      <li id="Active"><a @click="filter = 'active'" href="#">Active<a/></li>
+      <li id="Completed"><a @click="filter = 'completed'" href="#">Completed<a/></li>
+    </ul>
+  </div>
+
+</div>
