@@ -1,0 +1,64 @@
+new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data: () => ({
+      showPassword:false
+    }),
+})
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.3.2/vuetify.min.js"></script>
+<link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet"/>
+
+
+<div id="app">
+  <v-app style="
+    background-color: #011c40;
+    background-image: linear-gradient(180deg,  #011c40 50%,  rgb(26, 65, 115) 100%);
+    background-size: cover;
+  ">
+    <v-main>
+       <v-container  class="fill-height"
+               fluid>
+    <v-row>
+      <v-col cols="12">
+        <v-row
+                justify="center"
+        >
+          <v-card tile>
+            <v-layout align-center>
+              <v-flex xs6 class="hidden-sm-and-down">
+                <v-img src="http://www.dpereira.nl/Er/img/banner.png" width="500px"></v-img>
+              </v-flex>
+              <v-flex class="pa-10 pb-8 text-center">
+                  <v-img class="mx-auto" src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" width="100px"></v-img>
+                <v-card-text class="pb-0">
+                  <v-form>
+                    <v-text-field
+                            label="Gebruikersnaam"/>
+                    <v-text-field
+                            :type="showPassword ? 'text' : 'password'"
+                            label="Wachtwoord"
+                            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                            @click:append="showPassword = !showPassword"
+                    />
+                    <v-checkbox dense label="Onthoud mij"></v-checkbox>
+                  </v-form>
+                </v-card-text>
+               <v-card-actions>
+                <v-btn height="50px" tile ripple depressed block color="secondary">Inloggen</v-btn>
+               </v-card-actions>
+                <v-divider></v-divider>
+                <div class="pt-3">
+                  <div class="d-block caption text-center"><a href="">Wachtwoord vergeten?</a></div>
+                  <div class="d-block caption text-center">Nog geen account? Meld u <a href="">hier</a> aan.</div>
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-card>
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
+    </v-main>
+  </v-app>
+</div>
