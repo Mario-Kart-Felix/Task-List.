@@ -73,13 +73,3 @@ app.mount("#app")
   </div>
 
 </div>
-Share Improve this answer Follow
-answered
-Jan 9 at 18:29
-
-Michal Levý
-15k●11 gold badge●2727 silver badges●4343 bronze badges
-it shows me an error "item Is defined but never used" – inKABusser Jan 9 at 19:32
-Prolly just an ESLint error you can easily ignore or rewrite (item) => true into () => true. But the code is just fine as you can see if you run the snippet... – Michal Levý Jan 9 at 20:05 
-Add a comment
-Your Answer
