@@ -1,0 +1,85 @@
+let app = Vue.createApp({  
+  setup() {
+    const newTodo = Vue.ref('');
+    const filter = Vue.ref('all')
+    const todos = Vue.ref([
+      { task: "Task 1", done: false, id: 1 },
+      { task: "Task 2", done: false, id: 2 }
+    ]);
+    
+    const filteredTodos = Vue.computed(() => {
+      const filterFn = filter.value === 'active' ? (item) => !item.done : 
+        filter.value === 'completed' ? (item) => item.done : (item) => true;
+      return todos.value.filter(filterFn)
+    })
+    
+    const addNewTodo = () => {
+      todos.value.push({
+        done: false,
+        task: newTodo.value,
+        id: Date.now(),
+      });
+      newTodo.value = ''
+    }
+
+    const toggleDone = (todo) => {
+      todo.done = !todo.done
+    }
+
+    const deleteTodo = (index) => {
+      todos.value.splice(index, 1)
+    }
+
+    const switchTheme = () => {
+      const body = document.body
+      if (body.classList.contains('light')) {
+        body.classList.replace('light', 'dark')
+      } else {
+        body.classList.replace('dark', 'light')
+      }
+    }
+
+    return {
+      addNewTodo,
+      newTodo,
+      todos,
+      toggleDone,
+      deleteTodo,
+      switchTheme,      
+      filter,
+      filteredTodos
+    }
+  }
+})
+
+app.mount("#app")
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.5/vue.global.prod.js" integrity="sha512-7mjRUL9551cOFF57PSrURwSa9UsUmufUCU9icwUEoUrECcxpa20PakbPplb7b4ZGbCc0StIr9ytHoXH9+v6ygA==" crossorigin="anonymous"></script>
+<div id="app">
+  <div class="myTodos">
+    {{ filter }}
+    <ul id="todo-list">
+      <li v-for="(todo, index) in filteredTodos" :key="todo.id" class="todo-item ">
+        <input @click="toggleDone(todo)" class="js-tick" id="1610198328386" type="checkbox" :checked="todo.done">
+        <span :class="{ done: todo.done }">{{todo.task}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="controls">
+    <ul class="controls-list" data-lists>
+      <li id="All"><a @click="filter = 'all'" href="#">All<a/></li>
+      <li id="Active"><a @click="filter = 'active'" href="#">Active<a/></li>
+      <li id="Completed"><a @click="filter = 'completed'" href="#">Completed<a/></li>
+    </ul>
+  </div>
+
+</div>
+Share Improve this answer Follow
+answered
+Jan 9 at 18:29
+
+Michal Levý
+15k●11 gold badge●2727 silver badges●4343 bronze badges
+it shows me an error "item Is defined but never used" – inKABusser Jan 9 at 19:32
+Prolly just an ESLint error you can easily ignore or rewrite (item) => true into () => true. But the code is just fine as you can see if you run the snippet... – Michal Levý Jan 9 at 20:05 
+Add a comment
+Your Answer
