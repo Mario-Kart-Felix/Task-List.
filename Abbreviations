@@ -1,0 +1,57 @@
+Abbreviations
+The following abbreviations are used in this manuscript:
+CGH Comparative Genomic Hybridization
+CRISPR Clustered Regularly Interspaced Palindromic Repeats
+DMR Differentially Methylated Region
+DNA DeoxyriboNucleic Acid
+DWT Discrete Wavelet Transform
+GO Gene Ontology
+GPU Graphics Processing Unit
+SOA Service Oriented Architecture
+PCR Polymerase Chain Reaction
+References
+1. Bird, A. DNA methylation patterns and epigenetic memory. Genes Dev. 2002, 16, 6–21. [CrossRef]
+2. Jones, P.A.; Takai, D. The Role of DNA Methylation in Mammalian Epigenetics. Science 2001, 293, 1068–1070. [CrossRef]
+[PubMed]
+3. Wu, H.; Tao, J.; Sun, Y.E. Regulation and function of mammalian DNA methylation patterns: A genomic perspective. Brief. Funct.
+Genom. 2012, 11, 240–250. [CrossRef]
+4. Jones, P.A. Functions of DNA methylation: Islands, start sites, gene bodies and beyond. Nat. Rev. Genet. 2013, 13, 484–492.
+[CrossRef] [PubMed]
+5. Laird, P.W. Principles and challenges of genome-wide DNA methylation analysis. Nat. Rev. Genet. 2010, 11, 191–203. [CrossRef]
+[PubMed]
+6. Krueger, F.; Andrews, S.R. Bismark: A flexible aligner and methylation caller for Bisulfite-Seq applications. Bioinformatics 2011,
+27, 1571–1572. [CrossRef] [PubMed]
+7. Chen, P.Y.; Cokus, S.; Pellegrini, M. BS Seeker: Precise mapping for bisulfite sequencing. BMC Bioinform. 2010, 11, 203. [CrossRef]
+[PubMed]
+8. Harris, E.Y.; Ponts, N.; Le Roch, K.G.; Lonardi, S. BRAT-BW: Efficient and accurate mapping of bisulfite-treated reads. Bioinfor-
+matics 2012, 28, 1795–1796. [CrossRef] [PubMed]
+9. Olanda, R.; Pérez, M.; Orduña, J.M.; Tárraga, J.; Dopazo, J. A new parallel pipeline for DNA methylation analysis of long reads
+datasets. BMC Bioinform. 2017, 18, 161. [CrossRef]
+10. Hansen, K.D.; Langmead, B.; Irizarry, R.A. BSmooth: From whole genome bisulfite sequencing reads to differentially methylated
+regions. Genome Biol. 2012, 13, R83. [CrossRef]
+11. Hebestreit, K.; Dugas, M.; Klein, H.U. Detection of significantly differentially methylated regions in targeted bisulfite sequencing
+data. Bioinformatics 2013, 29, 1647–1653. [CrossRef] [PubMed]
+12. Sun, D.; Xi, Y.; Rodriguez, B.; Park, H.J.; Tong, P.; Meong, M.; Goodell, M.A.; Li, W. MOABS: Model based analysis of bisulfite
+sequencing data. Genome Biol. 2014, 15, R38.
+13. Wu, H.; Xu, T.; Feng, H.; Chen, L.; Li, B.; Yao, B.; Qin, Z.; Jin, P.; Conneely, K.N. Detection of differentially methylated regions
+from whole-genome bisulfite sequencing data without replicates. Nucleic Acids Res. 2015, 43, e141. [CrossRef] [PubMed]
+14. Shafi, A.; Mitrea, C.; Nguyen, T.; Draghici, S. A survey of the approaches for identifying differential methylation using bisulfite
+sequencing data. Brief. Bioinform. 2018, 19, 737–753. [CrossRef] [PubMed]
+15. Xie, C.; Leung, Y.K.; Chen, A.; Long, D.X.; Hoyo, C.; Ho, S.M. Differential methylation values in differential methylation analysis.
+Bioinformatics 2018, 35, 1094–1097. [CrossRef]
+16. Catoni, M.; Tsang, J.M.; Greco, A.P.; Zabet, N. DMRcaller: A versatile R/Bioconductor package for detection and visualization of
+differentially methylated regions in CpG and non-CpG contexts. Nucleic Acids Res. 2018, 46, e114. [CrossRef]
+17. Blume, A. methylKit, DNA methylation analysis from high-throughput bisulfite sequencing data. Genome Biol. 2018. [CrossRef]
+18. Fernández, L.; Pérez, M.; Orduña, J.M. Visualization of DNA methylation results through a GPU-based parallelization of the
+wavelet transform. J. Supercomput. 2019, 75, 1496–1509. [CrossRef]
+19. Fernández, L.; Pérez, M.; Olanda, R.; Orduña, J.M.; Marquez-Molins, J. HPG-DHunter: An ultrafast, friendly tool for DMR
+detection and visualization. BMC Bioinform. 2020, 21, 287. [CrossRef]
+20. Wang, Z.; Li, X.; Jiang, Y.; Shao, Q.; Liu, Q.; Chen, B.; Huang, D. swDMR: A Sliding Window Approach to Identify Differentially
+Methylated Regions Based on Whole Genome Bisulfite Sequencing. PLoS ONE 2015, 10, e0132866. [CrossRef] [PubMed]
+21. Liu, H.; Liu, X.; Zhang, S.; Lv, J.; Li, S.; Shang, S.; Jia, S.; Wei, Y.; Wang, F.; Su, J.; et al. Systematic identification and annotation of
+human methylation marks based on bisulfite sequencing methylomes reveals distinct roles of cell type-specific hypomethylation
+in the regulation of cell identity genes. Nucleic Acids Res. 2016, 44, gkv1332. [CrossRef]
+22. Müller, F.; Scherer, M.; Assenov, Y.; Lutsik, P.; örn Walter, J.; Lengauer, T.; Bock, C. RnBeads 2.0: Comprehensive analysis of DNA
+methylation data. Genome Biol. 2019, 20, 55. [CrossRef]
+23. Kuo, H.C.; Lin, P.Y.; Chung, T.C.; Chao, C.M.; Lai, L.C.; Tsai, M.H.; Chuang, E.Y. DBCAT: Database of CpG Islands and Analytical
+Tools for Identifying Comprehensive Methylation Profiles in Cancer Cells. J. Comput. Biol. 2011, 18, 113–1017. [CrossRef]
