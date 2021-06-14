@@ -1,0 +1,52 @@
+The hardware platform used as the web server consists of a computer based on the
+Intel® Xeon® CPU E5620 @2.4 GHz processor, with 8 cores and 2 threads per core, and
+24 Gb RAM memory, as well as a GeForce RTX 2070 graphic device, with 2304 NVidia cores
+and 8 GB GDDR6 RAM memory. The procedure steps implemented in the GPU have been
+carried out using the CUDA V10.2.89 library. The client browsers to communicate with
+the server were Mozilla Firefox and Google Chrome, and they were installed in personal
+computers. The first test was executed with the client computer located in the same
+university campus network, and the second test was executed from a personal computer
+out of the campus network, but in the same metropolitan area.
+The main parameter values for the first test (the first dataset) were coverage ratios one
+and five, 0.25 and 0.3 as threshold values and DWT levels five, six and seven. Combining
+these values, 12 different experiments were carried out. Table 1 shows the evaluation
+results. This table shows the number of experiments in the column labeled as “exp”, the
+coverage of each experiment in the column labeled as “cov”, the threshold value in the
+column labeled as “thr”, and the DWT level in the column labeled as “dwt level”. The rest
+of the columns shows the evaluation results: the number of DMRs found are shown in the
+column labeled as “num DMRs”, the processing time in the web server is shown in the
+column labeled as “process”, the response time provided to the user webpage is shown in
+the column labeled as “response”, and the communication delay (in milliseconds), i.e., the
+difference between the response time and the server processing time for each experiment,
+are shown in the column labeled “comm delay”.
+Table 1. Evaluation results for very low coverage value of chromosome 21 (BsseqDataset).
+Exp Cov Thr Dwt Level Num DMRs Process (ms) Response (ms) Comm Delay (ms)
+1 1 0.25 5 14,846 1179 1595 416
+2 6 10,369 738 1048 310
+3 7 7719 490 727 236
+4 0.30 5 12,393 1104 1470 366
+5 6 9641 731 1029 298
+6 7 7085 448 673 225
+7 5 0.25 5 4256 1021 1182 161
+8 6 2866 768 865 97
+9 7 2082 453 548 94
+10 0.30 5 3603 997 1145 148
+11 6 2576 722 807 85
+12 7 1915 446 533 87
+The number of DMRs detected (values in column “num DRMs”) is high due to the
+very low coverage ratios used. Nevertheless, it can be seen that for a coverage ratio of
+5 the number of detected DMRs is about one third of the number of DMRs detected with
+a coverage ratio of 1, where there are a high number of samples with a single occurrence
+of a read aligned in that DNA location. If we compare the number of DMRs found for
+different dwt levels, we can see how the number of DMRs found decreases as the level of
+DWT increases. This is due to the compression of the signal as the transformation level
+is increased. All the times shown in the rest of the columns are directly related to the
+number of DMRs found, as it could be expected. Thus, the response times are shorter for a
+coverage ratio of 5, where a maximum response time of 1182 s is needed. Although these
+times cannot be rated as interactive, they are efficient times if we take into account that
+we are performing an automatic detection of all the DMRs in a chromosome. Also, it is
+worth mention that for a coverage ratio of 1 the fraction of the response time devoted to
+computation (column labeled as “process”) is between 0.64 and 0.75 for the different levels
+of DWT, while this fraction is about 0.85 for a coverage ratio of 5.
+Figure 8 shows the communication delay in milliseconds and the number of DMRs
+found in each experiment. This figure shows a clear correlation between the two variables,
