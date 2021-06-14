@@ -1,0 +1,35 @@
+the server is located. In both configurations we have taken 30 measurements, to have
+statistically significant values. The average time measured in the first configuration is
+350 milliseconds. Regarding some references in the field [57,58], this response time can be
+considered to be an immediate response-time. The average value obtained in the second
+configuration is 533 milliseconds. These results show that the web application can provide
+immediate response times also for the visualization of the results, and the delay in drawing
+the required DMR in the client computer will depend on the network connections.
+Figure 9. Comparison between the performance evaluation in [19] and the same test with the
+web-based application.
+5. Conclusions
+In this paper, we have proposed the implementation of HPG-Dhunter [19] as a web-
+based application for identifying and visualizing DMRs in the DNA coming from different
+samples. The tool has been installed on a server, together with a file server and an au-
+thentication server. The adaptation of our tool to the new web environment has helped
+to improve some sections of the software. Furthermore, the web-based version improves
+the efficiency in the identification of DMRs regarding the standalone version, because in
+the web-based application the GPU is fully available for computation tasks exclusively,
+and the visualization of the DMRs found takes place in the client computer. These im-
+provements result in an average speedup of 5.54 regarding the standalone version. The
+data transmission through a LAN is included in the total response time, showing that if
+the network connection does not add significant delay, then the response time offered by
+the server is better than the one offered by the standalone version. Also, the response
+time offered by the web-based application to DMR visualization requests coming from
+the client computer can be considered to be immediate. Thus, the proposed web-based
+application avoids the need for user skills or knowledge about GPU installation, setting up
+and maintenance, which prevented this tool from being used by biomedical researchers
+with little or no knowledge about this hardware and related software packages.
+As a future work to be done, we plan to use an array of GPU devices to support
+massive multiuser access to the web application.
+Author Contributions: L.F. and R.O. have programmed the necessary changes in the software. M.P.
+has designed the tests batteries, and J.M.O. has leaded and supervised the writting of this paper. All
+authors have read and agreed to the published version of the manuscript.
+Funding: This research was funded by Spanish MCIU and EU ERDF programs under grant RTI2018-
+098156-B-C55.
+Conflicts of Interest: The authors declare no conflict of interest.
