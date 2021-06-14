@@ -1,0 +1,52 @@
+files to the web server is significantly reduced. On the other hand, we have added several
+improvements in the HPG-Dhunter algorithm which performs a better use of GPU memory
+and RAM memory, improving the computation times. First, the backend of the web-based
+application does not use OpenGl for the visualization of data in any monitor. Instead,
+the visualization takes place in the client computer. As a result, the GPU is exclusively
+dedicated to DMR detection, and much bigger data chunks can be stored in the GPU
+memory and processed in parallel, thus decreasing the total required time. Second, all the
+methylated locations in the selected samples are stored in a matrix when loading the input
+files. Instead of computing each time the number of methylated locations in the considered
+DNA segment in the process of DMR detection, this huge matrix is checked, significantly
+reducing the computing time for DMR detection. These two improvements significantly
+reduce the response time of the web-based application.
+Table 2. Response times for detecting all the DMRs in 12 chromosomes of real dataset (milliseconds).
+Chrom DMR DMR Comm Num Load T1 DMR + T2 [19]
+Speedup T2/T1 Server Client Delay DMRs Files Load Files Table 13 A–D
+2 21,998 22,902 904 719 26,340 49,242 270,559 5.49
+3 17,655 18,414 759 554 22,675 41,089 218,035 5.31
+4 15,665 16,359 694 391 14,812 31,171 154,287 4.95
+7 13,483 14,232 749 555 19,634 33,866 190,588 5.63
+8 12,438 13,116 678 380 15,660 28,776 148,693 5.17
+9 12,514 13,244 730 489 17,100 30,344 172,293 5.68
+11 12,336 13,188 852 607 25,046 38,234 214,391 5.61
+12 14,118 14,928 810 496 21,505 36,433 180,999 4.97
+13 8465 8744 279 182 6302 15,046 74,378 4.94
+17 7997 8893 896 624 22,299 31,192 190,331 6.10
+20 5680 6293 613 312 12,335 18,628 103,958 5.58
+22 3841 4408 567 291 11,729 16,137 94,399 5.85
+total (ms) 146,190 154,721 215,437 370,158 2,012,911 average 5.54
+(min) 2.44 2.58 3.59 6.17 33.55
+Figure 9 shows a comparison between the performance evaluation in [19] and the
+same test done with the web application (user waiting time for DMRs detection plus time
+required for loading files, the values in the column labeled as “T1 DMR + load” in Table 2).
+The scale on the right side of Figure 9 (Y-axis) correspond to the values shown in Table 2.
+The scale on the left side of Figure 9 correspond to the values for the same metric shown
+by the standalone tool [19]. It can be seen a very similar shape in the two curves, due to
+the type of files for each chromosome. However, a significant speedup is achieved by the
+web-based application (around 5×, since the values in the scale of the left side are five
+times higher than the ones on the right side). Therefore, we can state that the web-based
+application improves the user experience regarding the standalone version. Table 2 also
+shows the communication delay in milliseconds and the number of DMRs identified. The
+behavior of these variables is the same of the first dataset, where the communication delay
+has a direct relation with the number of DMRs identified.
+Finally, we have measured the response time provided to the user by the web ap-
+plication for the visualization of a DMR, i.e., once the DMR identification is done, we
+have measured the time required for receiving from the server all the necessary data for
+drawing in the client computer the DMR the user wants to visualize. We have measured
+this response time for visualization under two different configurations: the first case is
+when most of the response time is due to the processing time in the server and the network
+connection does not add significant delay. In this case, we have located the client computer
+in the same network (a 100 Mbps Ethernet network) where the server is located. In the
+second configuration, the client computed is placed in a different LAN, with a domestic
+internet connection, although geographically located in the same metropolitan area wher
