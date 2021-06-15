@@ -1,0 +1,16 @@
+Choose your Cas enzyme
+The first step in designing a CRISPR experiment is choosing the appropriate CRISPR-associated (Cas) enzyme. The protospacer-adjacent motif (PAM) sequence is crucial in choosing which Cas enzyme to use, because it determines potential target sites for genome editing. The 2 main Cas enzymes used in genome editing are Cas9 and Cas12a, Cas9 was the first Cas enzyme used in the earliest CRISPR genome editing projects, and it remains the most popular Cas enzyme. Cas12a is exceptionally useful not only in mammalian cells but also in plants and other organisms. Optimized Alt-R™  Cas9 and Cas12a reagents are available from IDT. For some special projects, other Cas enzymes, such as catalytically dead Cas9 (dCas9) and nickases, are appropriate instead.
+
+Design your guide RNA
+To direct the Cas enzyme to the target site in the genomic DNA, guide RNA (gRNA) must be optimally designed. For Cas9, the gRNA can be made either as a single guide RNA (sgRNA) or a 2-part guide RNA (containing crRNA and tracrRNA). For Cas12a, the gRNA is also called crRNA and is a single molecule of RNA.
+
+If you are using Cas9 systems, you may select from predesigned gRNAs or use our proprietary algorithms to design custom gRNAs. For designs of your own or from publications, use our design checker tool to assess targeting potential before ordering Cas9 gRNAs that are synthesized using Alt-R gRNA modifications. The Alt-R modification improves genome editing outcomes, and decreases toxicity and immune responses.
+
+STEP 2: DELIVER
+To deliver Cas enzyme and guide RNA to cells, we recommend complexing the enzyme and gRNA to form a ribonucleoprotein (RNP). The RNP can then be delivered to cells by either electroporation or lipofection. We offer separate electroporation enhancers for Cas9 and Cas12a to increase transfection efficiency.
+
+STEP 3: REPAIR
+RNP containing either Cas9 or Cas12a cuts the genomic DNA, forming a double-strand break (DSB). Cells naturally undergo non-homologous end joining (NHEJ) or homology-directed repair (HDR) pathways. The NHEJ pathway is useful for making knockouts to study gene function. HDR requires not only RNP to make the DSB but also a template (i.e., a donor oligo containing the insertion sequence) to direct the repair, and can be used to knock in specific mutations (e.g., insertions, deletions, single-nucleotide polymorphisms). We offer a tool to design HDR donor oligos. These donors can include short DNA (Alt-R HDR donor oligos) or long DNA (Megamer® fragments), depending on the mutation or knock-in desired.
+
+STEP 4: ANALYZE
+Mutation detection can be assessed by several methods based on your experimental needs. For non-specific determination of the presence of a change in a genomic sequence, gel-based methods can be used. For determining the success of on-target editing and for investigating off-target effects, next generation sequencing (NGS) is highly recommended.
