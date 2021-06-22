@@ -1,0 +1,28 @@
+version: "5.5"
+
+services:
+  db:
+    image: mongo
+    container_name: agi-vue-db
+    volumes:
+      - /data/db
+      - /dump
+    command: mongod --smallfiles
+    ports:
+      - "27017:27017"
+  
+  api:
+    build: 
+      context: ./server
+      dockerfile: api.dockerfile
+    container_name: agi-vue-api
+    ports:
+      - "3000:3000"
+
+  api:
+    build: 
+      context: ./app
+      dockerfile: app.dockerfile
+    container_name: agi-vue
+    ports:
+      - "8080:8080"
