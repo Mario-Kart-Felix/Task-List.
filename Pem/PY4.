@@ -1,0 +1,9 @@
+return final
+
+
+def grna_design_compl(pam_locations, pam_seqs, complement_pams, seqs):
+    dict_comp = {}
+    for k, v in pam_locations.items():
+            if k == 'complement':
+                complement_pam = seqs['complement'][i - 3:i + 4]
+                complement_grna = seqs['complement'][i + 4:i + 44
